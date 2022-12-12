@@ -3,10 +3,10 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>org.javaee</groupId>
-    <artifactId>javaee-cdi-sample</artifactId>
+    <artifactId>bookshelf</artifactId>
     <version>1.0</version>
     <packaging>war</packaging>
-    <name>javaee-cdi-sample</name>
+    <name>bookshelf</name>
 
     <properties>
         <!-- Java EE -->
