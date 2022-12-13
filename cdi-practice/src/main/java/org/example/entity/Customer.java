@@ -1,4 +1,4 @@
-package org.example.enity;
+package org.example.entity;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;
@@ -8,23 +8,25 @@ import lombok.Setter;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
 import javax.persistence.OneToOne;
 
+@Entity
 @Getter
 @Setter
 @NoArgsConstructor
 @AllArgsConstructor
-@Entity
-public class OrderLine {
+public class Customer {
     @Id
     @GeneratedValue
     private Long id;
+    private String firstName;
+    private String secondName;
+
+    private String email;
+    private String phone;
 
     @OneToOne
-    private Item item;
-
-    private Double unitPrice;
-
-    private Integer quantity;
-
+    @JoinColumn(name = "address_fk", nullable = false)
+    private Address address;
 }

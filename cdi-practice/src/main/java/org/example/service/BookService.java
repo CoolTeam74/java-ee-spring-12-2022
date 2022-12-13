@@ -2,14 +2,12 @@ package org.example.service;
 
 import org.example.NumberGenerator;
 import org.example.ThirteenDigits;
-import org.example.enity.Author;
-import org.example.enity.Book;
+import org.example.entity.Author;
+import org.example.entity.Book;
 
-import javax.annotation.Resource;
 import javax.inject.Inject;
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
-import javax.transaction.TransactionManager;
 import java.util.Arrays;
 
 public class BookService {

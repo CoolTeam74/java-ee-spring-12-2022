@@ -1,4 +1,4 @@
-package org.example.enity;
+package org.example.entity;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;
@@ -8,7 +8,6 @@ import lombok.Setter;
 import javax.persistence.DiscriminatorValue;
 import javax.persistence.Entity;
 import javax.persistence.ManyToMany;
-import javax.persistence.NamedNativeQuery;
 import javax.persistence.NamedQueries;
 import javax.persistence.NamedQuery;
 import java.util.List;
@@ -20,10 +19,12 @@ import java.util.List;
 @Entity
 @DiscriminatorValue("B")
 @NamedQueries({
-                @NamedQuery(name="findAll", query = "SELECT b FROM Book b"),
+                @NamedQuery(name= Book.FIND_ALL, query = "SELECT b FROM Book b"),
                 @NamedQuery(name = "findBookSomeTitle", query = "SELECT b FROM Book b WHERE b.title = 'some'")
 })
 public class Book extends Item {
+    public final static String FIND_ALL = "Book.findAll";
+
     @ManyToMany
     private List<Author> authors;
 

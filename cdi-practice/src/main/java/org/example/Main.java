@@ -1,7 +1,7 @@
 package org.example;
 
-import org.example.enity.Author;
-import org.example.enity.Book;
+import org.example.entity.Author;
+import org.example.entity.Book;
 import org.example.service.BookService;
 import org.jboss.weld.environment.se.Weld;
 import org.jboss.weld.environment.se.WeldContainer;
