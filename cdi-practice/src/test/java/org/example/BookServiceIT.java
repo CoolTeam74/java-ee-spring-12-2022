@@ -5,7 +5,7 @@ import org.jboss.weld.environment.se.WeldContainer;
 import org.junit.Assert;
 import org.junit.Test;
 
-public class BookServiceTetst {
+public class BookServiceIT {
     @Test
     public void testCreateBook() {
         Weld weld =  new Weld();
