@@ -2,12 +2,16 @@ package org.example.ejb;
 
 import org.example.entity.Book;
 import org.example.entity.Item;
+import org.example.ws.CardValidator;
+import org.example.ws.Validator;
 
 import javax.annotation.Resource;
 import javax.ejb.EJB;
 import javax.ejb.SessionContext;
 import javax.ejb.Stateless;
 import javax.validation.constraints.NotNull;
+import javax.xml.ws.WebServiceRef;
+import javax.xml.ws.soap.Addressing;
 import java.util.List;
 
 @Stateless
@@ -15,23 +19,26 @@ public class ItemEjb implements ItemEjbRemote {
     @EJB
     private BookEJB bookEJB;
     @Resource
-    SessionContext ctx;
+    private SessionContext ctx;
+
+    @WebServiceRef
+    private Validator cardValidator;
 
 
-   List<Book> findBooks() {
-
+   public List<Book> findBooks() {
+       return null;
     }
 
-    List<Item> findBCds() {
-
+    public List<Item> findBCds() {
+        return null;
     }
 
-    List<Book> findBookById(Long id) {
-
+    public List<Book> findBookById(Long id) {
+        return null;
     }
 
-    List<Item> findCdById(Long id) {
-
+    public List<Item> findCdById(Long id) {
+        return null;
     }
 
     public @NotNull Book createBook(@NotNull Book book) {
