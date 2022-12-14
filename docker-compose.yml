@@ -1,0 +1,22 @@
+version: '2'
+
+services:
+  glassfish:
+    image: vulhub/glassfish:4.1
+    ports:
+      - "4848:4848"
+    environment:
+      - ADMIN_PASSWORD=vulhub_default_password
+#  wildfly:
+#    image: docker.io/bitnami/wildfly:27
+#    ports:
+#      - '8080:8080'
+#      - '9990:9990'
+#    volumes:
+#      - 'wildfly_data:/bitnami'
+#    environment:
+#      - WILDFLY_PASSWORD=password
+
+volumes:
+  wildfly_data:
+    driver: local
