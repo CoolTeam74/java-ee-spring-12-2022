@@ -15,6 +15,10 @@ public class BookEJB implements BookEjbRemote {
         return bookRepository.findAll();
     }
 
+    public Book findBookBYId(@NotNull  String id) {
+        return bookRepository.findById(id);
+    }
+
     public @NotNull Book createBook(@NotNull Book book) {
         return bookRepository.save(book);
     }
